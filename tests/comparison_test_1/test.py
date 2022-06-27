@@ -101,6 +101,7 @@ def cubes_test_1(num_dims):
     for i in range(1, num_dims):
         cube_dims = [dim_names[i], dim_names[i + 1]]
         x.add_cube(cube, cube_dims)
+        res = x_sub_cube.contained_in(x)
         w = next(iter(cube[0]))
         y = next(iter(cube[1]))
         w.start += 200
